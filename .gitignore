@@ -1,0 +1,28 @@
+# Protect sensitive artifacts, drivers, and exploit scripts from public Git sync
+*.ps1
+*.exe
+*.dll
+*.sys
+*.bin
+*.zip
+*.log
+*.obj
+*.lib
+*.exp
+
+# Ignore temporary build and tool directories
+DebugView/
+DebugView.zip
+GhidraMCP/
+BleedEngine/
+LACUNA-Chain/
+
+# Allow markdown research documentation and reports
+!README.md
+!VSS_SNAPSHOT_PROTECTION_BYPASS.md
+!EDR_RESILIENCE_BYOVD_METHODOLOGY.md
+!F12_BUG_BOUNTY_REPORT.md
+!F12_FINDING_REPORT.md
+!F12_CHAINING_IMPACT.md
+!F12_EVIDENCE_AUDIT.md
+!F12_POLICY_POSTURE_EVIDENCE.md
