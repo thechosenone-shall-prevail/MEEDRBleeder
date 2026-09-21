@@ -12,10 +12,10 @@
 
 <br/>
 
-```
-When a software is well-engineered, you don't evade it.
-You bleed it with a hundred cuts.
-```
+<p align="center">
+<i>"When a software is well-engineered, you don't evade it.<br/>
+You bleed it with a hundred cuts."</i>
+</p>
 
 ---
 
@@ -39,8 +39,8 @@ Under these conditions, the endpoint protection suite was systematically bypasse
 
 | Document | Scope | Impact |
 | :--- | :--- | :--- |
-| **[VSS_SNAPSHOT_PROTECTION_BYPASS.md](VSS_SNAPSHOT_PROTECTION_BYPASS.md)** | **Finding #12: VSS Delete Guard Semantic Mismatch**<br/>Static reverse engineering and live kernel debug verification of `MEARWFltDriver.sys`, showing `IOCTL_VOLSNAP_DELETE_SNAPSHOT` checks against base volume paths instead of shadow-copy namespaces, allowing unhindered shadow copy deletion. | **High**<br/>Anti-Ransomware Safeguard Failure |
-| **[EDR_RESILIENCE_BYOVD_METHODOLOGY.md](EDR_RESILIENCE_BYOVD_METHODOLOGY.md)** | **In-Memory Deep AV Evasion & BYOVD Killswitch**<br/>Technical analysis of multi-stage XOR payload de-obfuscation, manual PE loading in memory (`NativeLoader`), kernel driver staging via `NtLoadDriver`, and arbitrary process termination via `ZwTerminateProcess`. | **Critical**<br/>Complete EDR Telemetry Severance |
+| **[VSS Bypass](VSS_SNAPSHOT_PROTECTION_BYPASS.md)** | **Finding #12: VSS Delete Guard Semantic Mismatch**<br/>Static reverse engineering and live kernel debug verification of `MEARWFltDriver.sys`, showing `IOCTL_VOLSNAP_DELETE_SNAPSHOT` checks against base volume paths instead of shadow-copy namespaces, allowing unhindered shadow copy deletion. | **High**<br/>Anti-Ransomware Safeguard Failure |
+| **[BYOVD Methodology](EDR_RESILIENCE_BYOVD_METHODOLOGY.md)** | **In-Memory Deep AV Evasion & BYOVD Killswitch**<br/>Technical analysis of multi-stage XOR payload de-obfuscation, manual PE loading in memory (`NativeLoader`), kernel driver staging via `NtLoadDriver`, and arbitrary process termination via `ZwTerminateProcess`. | **Critical**<br/>Complete EDR Telemetry Severance |
 
 ---
 
@@ -82,9 +82,9 @@ Substring Match: wcsstr("\Device\HarddiskVolumeShadowCopy20", "\Device\HarddiskV
 
 ## Vector II: In-Memory Reflective BYOVD Killswitch
 
-```
-In the silence between kernel calls, death is written.
-```
+<p align="center">
+<i>"In the silence between kernel calls, death is written."</i>
+</p>
 
 The second research vector analyzes the resilience of ManageEngine's user-mode EDR agents when subjected to in-memory reflective execution and Bring Your Own Vulnerable Driver (BYOVD) primitives:
 
